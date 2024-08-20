@@ -1,0 +1,35 @@
+<div class="container mx-auto" >
+  <div style="display: flex; margin: 5vh;">
+
+    <div class="mt-10" style="align-items: center;">
+      <img [src]="artist?.images[0]?.url" alt="{{ artist?.name }}" class="w-64 h-64 rounded-full">
+      <!-- <p class="mt-4 text-white">{{ artist?.genres.join(', ') }}</p> -->
+    </div>
+      
+    <div class="mt-10" style="align-content: center; width: 50vw; margin-left: 4vw;">
+      <h1 class="text-6xl font-bold text-white" style="margin-bottom: 4vh;">{{ artist?.name }}</h1>
+      <p class="text-white">
+        Maira Freitas é uma cantora, pianista e compositora brasileira, conhecida por seu trabalho na música popular brasileira (MPB). Ela é filha do renomado cantor e compositor Martinho da Vila. Maira tem uma formação sólida em música, tendo estudado piano clássico, e é conhecida por incorporar elementos do samba, jazz e outros estilos em sua música. Ela lançou álbuns como "Maira Freitas" (2011) e "Piano e Batucada" (2015), que foram bem recebidos pela crítica. Além de sua carreira solo, Maira também colabora com outros artistas e participa de diversos projetos musicais.
+      </p>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: flex-end;">
+    <div style="align-items: center; display: flex;">
+      <p  class="text-white" style="align-items: center; margin: 5vh;">Ayé òrun, álbum que Maíra Freitas lança em 26 de maio, pode ser considerado o quarto título da discografia da pianista, cantora e compositora carioca. É que, há três anos, a artista teve editada em disco a trilha sonora que compôs para o filme Sementes – Mulheres pretas no poder (2020).
+  
+        Contudo, Ayé òrun é o primeiro álbum de Maíra Freitas desde Piano e batucada (2015), disco editado há oito anos. Ayé òrun é álbum gravado e assinado pela artista com o coletivo feminino Jazz das minas, grupo que aglutina Cris Ariel (guitarra, voz e produção musical), Samara Líbano (violão de sete cordas), Paula Pardon (baixo), Monica Ávila (sax, flauta e voz), Sara Leite (trompete), Kátia Preta (trombone e voz), Rapha Morret (percussão) e Flavia Belchior (bateria e voz).</p>
+    </div>
+    <img src="mairaCantando.png" alt="Instagram Icon" class="w-64 h-64 rounded-full" />
+  </div>
+
+  <h2 class="text-2xl font-semibold mt-20">Álbuns</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+    <div *ngFor="let album of albums" class="bg-white shadow-lg rounded-lg p-4">
+      <img [src]="album.images[0]?.url" alt="{{ album.name }}" class="w-full h-64 object-cover rounded-lg">
+      <h3 class="text-xl font-semibold mt-2">{{ album.name }}</h3>
+    </div>
+  </div>
+</div>
+
+  
